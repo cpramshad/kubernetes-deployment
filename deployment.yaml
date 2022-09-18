@@ -15,4 +15,9 @@ spec:
       containers:
         - name: second-node
           image: ramshad/kube-first-app:2
+          imagePullPolicy: Always
+          livenessProbe: 
+            httpGet:
+              path: /
+              port: 8080
   
